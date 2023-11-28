@@ -1,12 +1,135 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
-<html>
+<html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title> </title>
+    <meta charset="UTF-8" />
+    <title>Kordalski Tabela</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            border: 20px solid red; /* Grube obramowanie wokół tabeli */
+        }
+
+        th, td {
+            border: 4px solid red; /* Obramowanie 1 piksel szerokości, czarne */
+            padding: 16px;
+            text-align: left;
+            font-family: 'Arial', sans-serif; /* Pierwsza rodzina czcionek */
+            font-size: 16px; /* Pierwszy rozmiar czcionki */
+        }
+
+        th.center, td.center {
+            text-align: center;
+            font-family: 'Times New Roman', serif; /* Druga rodzina czcionek */
+            font-size: 18px; /* Drugi rozmiar czcionki */
+        }
+
+        th.header-bar {
+            border: 1px solid red;
+            background-color: white; /* Kolor tła paska */
+            text-align: center;
+        }
+
+        td.no-border {
+            border: none; /* Usunięcie obramowania */
+        }
+
+        /* Kolorowanie odpowiednich komórek */
+        td.Nr, th.header-bar {
+            color: black; /* Kolor tekstu czarny */
+        }
+
+        td.Rodzaj {
+            color: green; /* Kolor tekstu zielony */
+            font-size: 14px; /* Rozmiar czcionki mniejszy */
+        }
+
+        td.Producent {
+            color: orange; /* Kolor tekstu pomarańczowy */
+            font-size: 20px; /* Rozmiar czcionki większy */
+            text-align: right; /* Wyrównanie do prawej */
+        }
+
+        td.Model {
+            color: purple; /* Kolor tekstu fioletowy */
+            font-size: 16px; /* Rozmiar czcionki standardowy */
+        }
+
+        td.cena, td.intel-amd {
+            color: red; /* Kolor tekstu czerwony */
+            font-size: 18px; /* Rozmiar czcionki większy */
+            text-align: left; /* Wyrównanie do lewej */
+        }
+
+        /* Pokoloruj co drugi wiersz na różne odcienie niebieskiego */
+        tr:nth-child(even) {
+            background-color: #1c98e6;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #698291; 
+        }
+    </style>
 </head>
+
 <body>
-<h2>Tutaj będzie tabela</h2>
+    <table>
+        <tr>
+            <th colspan="5" class="header-bar"><b>Podzespoły komputerowe-Kordalski Hubert 2G1</b></th>
+        </tr>
+        <tr>
+            <th class="Nr" style="color: white;">Nr</th>
+            <th class="Rodzaj" style="color: white;">Rodzaj podzespołu</th>
+            <th class="Producent" style="color: white;">Producent</th>
+            <th class="Model" style="color: white;">Model</th>
+            <th class="Cena(w USD)" style="color: white;">Cena(w USD)</th>
+        </tr>
+        <tr>
+            <td class="Nr">1</td>
+            <td class="Rodzaj">Procesor</td>
+            <td class="Producent">Intel</td>
+            <td class="Model">Core i5-10400</td>
+            <td class="Cena(w USD)">199</td>
+        </tr>
+        <tr>
+            <td class="Nr">2</td>
+            <td class="Rodzaj">Pamięć RAM</td>
+            <td class="Producent">Corsair</td>
+            <td class="Model">Vengenace LPX 8GB</td>
+            <td class="Cena(w USD)" rowspan="2">Po 59</td>
+        </tr>
+        <tr>
+            <td class="Nr">3</td>
+            <td class="Rodzaj">Dysk SSD</td>
+            <td class="Producent">Kingston</td>
+            <td class="Model">A2000 256GB</td>
+        </tr>
+        <tr>
+            <td class="Nr">4</td>
+            <td class="Rodzaj">Zasilacz</td>
+            <td class="Producent">EVGA</td>
+            <td class="Model">500W 80+ Bronze</td>
+            <td class="Cena(w USD)">49</td>
+        </tr>
+        <tr>
+            <td class="Nr">5</td>
+            <td class="Rodzaj">Płyta główna</td>
+            <td class="Producent">ASUS</td>
+            <td class="Model">Prime H410M-A</td>
+            <td class="Cena(w USD)">69</td>
+        </tr>
+        <tr>
+            <td class="Nr">6</td>
+            <td class="Rodzaj">Karta graficzna</td>
+            <td class="Producent">Nvidia geforce</td>
+            <td class="Model">GTX 1660 Super</td>
+            <td class="Cena(w USD)">300</td>
+        </tr>
+        <tr>
+            <th colspan="5" class="center" style="background-color: #D7D7D7; color: black "><b>Podzespoły komputerowe</b></th>
+        </tr>
+    </table>
 <p> Link powrotny do <A HREF="https://hubert58248.github.io/mojastrona/Zadanie1_Kor.HTML">Index.html </A></p>
 </body>
 </html>
